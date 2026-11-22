@@ -1,0 +1,56 @@
+:root {
+  color-scheme: dark;
+  font-family: system-ui, sans-serif;
+  --bg: #0d0d0f;
+  --surface: #141417;
+  --surface-raised: #1c1c21;
+  --border: #2f2f36;
+  --border-subtle: #26262b;
+  --text: #e4e4e7;
+  --muted: #a1a1aa;
+  --link: #60a5fa;
+  --rank-base: #1a1a1f;
+}
+:root[data-theme="light"] {
+  color-scheme: light;
+  --bg: #f5f7fa;
+  --surface: #ffffff;
+  --surface-raised: #eef1f5;
+  --border: #d1d5db;
+  --border-subtle: #e5e7eb;
+  --text: #1f2937;
+  --muted: #6b7280;
+  --link: #2563eb;
+  --rank-base: #e8edf4;
+}
+body { margin: 0; background: var(--bg); color: var(--text); }
+a { color: var(--link); }
+input, button { display: block; margin: 4px 0; padding: 6px 10px; }
+input { color: var(--text); }
+button { background: var(--surface-raised); color: inherit; border: 1px solid var(--border); border-radius: 6px; cursor: pointer; }
+table { border-collapse: collapse; font-size: 14px; }
+td, th { padding: 4px 12px 4px 0; text-align: left; }
+h1 { margin: 0; font-size: 22px; }
+.app { display: grid; grid-template-columns: 220px 1fr; min-height: 100vh; }
+.side { border-right: 1px solid var(--border-subtle); padding: 20px 12px; display: flex; flex-direction: column; gap: 4px; }
+.side h2 { margin: 0 0 16px 10px; font-size: 18px; }
+.side a { text-decoration: none; padding: 8px 10px; border-radius: 6px; color: var(--muted); }
+.side a.active { background: var(--surface-raised); color: var(--text); }
+.right { min-width: 0; }
+.top { display: flex; justify-content: space-between; align-items: center; padding: 12px 24px; border-bottom: 1px solid var(--border-subtle); }
+.top-actions { display: flex; gap: 8px; }
+.main { padding: 24px; display: grid; gap: 16px; align-content: start; min-width: 0; }
+.cards { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+.two { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.card { background: var(--surface); border: 1px solid var(--border-subtle); border-radius: 8px; padding: 16px; overflow-x: auto; }
+.card h2, .card h3 { margin: 0 0 4px; font-size: 16px; }
+.sub { margin: 0 0 12px; font-size: 13px; color: var(--muted); }
+.big { font-size: 26px; font-weight: 600; }
+.badge { padding: 2px 8px; border-radius: 6px; font-size: 12px; }
+.critical { background: #7f1d1d; }
+.high { background: #78350f; }
+.medium { background: #713f12; }
+.rank { display: flex; justify-content: space-between; padding: 6px 10px; margin: 4px 0; border-radius: 4px; font-size: 14px;
+  background: linear-gradient(90deg, #1e3a8a var(--w), var(--rank-base) var(--w)); }
+.gauge { display: flex; align-items: center; gap: 24px; }
+.gauge b { display: block; font-size: 24px; }

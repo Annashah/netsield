@@ -1,0 +1,10 @@
+.tabs { display: flex; gap: 8px; }
+.tabs button { margin: 0; }
+.tabs button.on { background: #f97316; border-color: #f97316; color: #fff; }
+.rows { width: 100%; }
+.rows th { color: var(--muted); font-weight: 500; font-size: 13px; }
+.rows td, .rows th { padding: 7px 16px 7px 0; border-bottom: 1px solid var(--border-subtle); font-variant-numeric: tabular-nums; }
+.bar { width: 100px; height: 6px; background: var(--border-subtle); border-radius: 3px; }
+.bar i { display: block; height: 100%; background: #38bdf8; border-radius: 3px; }
+.heat td, .heat th { padding: 7px 10px; text-align: center; min-width: 40px; }
+.heat td:first-child, .heat th:first-child { text-align: left; white-space: nowrap; }
